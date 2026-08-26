@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boikoff Developments Hub</title>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --text-color: #111827;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --muted-text: #4b5563;
+            --footer-bg: #f3f4f6;
+            --footer-text: #6b7280;
+            --accent: #10b981;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --text-color: #f8fafc;
+                --card-bg: #1e293b;
+                --card-border: #334155;
+                --primary: #3b82f6;
+                --primary-hover: #60a5fa;
+                --muted-text: #94a3b8;
+                --footer-bg: #0f172a;
+                --footer-text: #64748b;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--muted-text);
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .intro {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .app-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .placeholder-card {
+            border: 2px dashed var(--card-border);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted-text);
+            font-style: italic;
+            border-radius: 12px;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: auto;
+            border-top: 1px solid var(--card-border);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">Independent Developer</span>
+        <h1>Boikoff Developments</h1>
+        <p class="subtitle">Creating practical, intuitive, and modern Android applications to support your daily routines and active lifestyle.</p>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2 class="section-title">Our Applications &amp; Privacy Policies</h2>
+            <p style="color: var(--muted-text); margin-bottom: 2rem;">
+                Here you can find direct access to the privacy policies and terms for apps developed by Boikoff Developments, ensuring full transparency in data handling.
+            </p>
+        </section>
+
+        <div class="app-grid">
+            <!-- Active All Day App Card -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="app-icon">A</div>
+                        <h3 class="card-title">Active All Day</h3>
+                    </div>
+                    <p class="card-desc">
+                        A modern and feature-rich workout alarm app designed to help you wake up and stay active throughout the day with customized challenges and alarms.
+                    </p>
+                </div>
+                <a href="apps/Active-All-Day/privacy.html" class="btn">Privacy Policy</a>
+            </div>
+
+            <!-- Placeholder for Next App -->
+            <div class="placeholder-card">
+                <div>
+                    <p>New application coming soon...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Boikoff Developments. All rights reserved.</p>
+        <p>Contact Email: <a href="mailto:boikoff.developments@gmail.com">boikoff.developments@gmail.com</a></p>
+        <div class="footer-links">
+            <a href="apps/Active-All-Day/privacy.html">Active All Day Policy</a>
+        </div>
+    </footer>
+</body>
+</html>
