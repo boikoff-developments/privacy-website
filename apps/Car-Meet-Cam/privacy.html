@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Car Meet Cam</title>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --text-color: #111827;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --primary: #e11d48;
+            --primary-hover: #be123c;
+            --muted-text: #4b5563;
+            --footer-bg: #f3f4f6;
+            --footer-text: #6b7280;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --text-color: #f8fafc;
+                --card-bg: #1e293b;
+                --card-border: #334155;
+                --primary: #fb7185;
+                --primary-hover: #f43f5e;
+                --muted-text: #94a3b8;
+                --footer-bg: #0f172a;
+                --footer-text: #64748b;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            flex: 1;
+        }
+
+        .back-nav {
+            margin-bottom: 2rem;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .btn-back:hover {
+            color: var(--primary-hover);
+        }
+
+        .btn-back svg {
+            margin-right: 0.5rem;
+            fill: currentColor;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem 0;
+        }
+
+        p, ul {
+            margin-bottom: 1.25rem;
+            color: var(--text-color);
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: auto;
+            border-top: 1px solid var(--card-border);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <nav class="back-nav">
+            <a href="../../index.html" class="btn-back">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Back to Developments Hub
+            </a>
+        </nav>
+
+        <article>
+            <h1>Privacy Policy for Car Meet Cam</h1>
+            <div class="last-updated">Last updated: September 23, 2026</div>
+
+            <p>
+                <strong>Boikoff Developments</strong> ("we", "our", or "us") provides the <strong>Car Meet Cam</strong> mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use the App and the choices available to you.
+            </p>
+
+            <p>
+                By downloading, installing, or using Car Meet Cam, you agree to the collection and use of information in accordance with this Privacy Policy.
+            </p>
+
+            <h2>1. Core Privacy Principle: 100% On-Device Processing</h2>
+            <div class="box">
+                <p><strong>Your Videos Stay on Your Device:</strong></p>
+                <p>
+                    All live camera previews, GLSL shader effects (fisheye distortion, chromatic aberration, vignette, and vintage noise), video recording, and video rendering/exporting happen <strong>exclusively and locally on your physical device</strong>. We do not operate external cloud processing servers, and we never collect, upload, stream, or view your photos, camera streams, or recorded videos.
+                </p>
+            </div>
+
+            <h2>2. Device Permissions and Data Handling</h2>
+            <p>
+                To provide its retro camcorder and video editing functionality, Car Meet Cam requests the following device permissions:
+            </p>
+
+            <h3>2.1 Camera Access (`android.permission.CAMERA`)</h3>
+            <p>
+                The App requires access to your device's camera to display the live viewfinder preview and apply real-time 90s fisheye shaders. Camera feed frames are processed directly by your device's graphics processor (GPU) and are never transmitted across the network or stored without your explicit action to record.
+            </p>
+
+            <h3>2.2 Microphone Access (`android.permission.RECORD_AUDIO`)</h3>
+            <p>
+                Microphone access is requested solely to record synchronized audio alongside video clips when you press the record button. Audio data is bundled into the local video file on your device and is never sent to external servers or used for voice recognition or profiling.
+            </p>
+
+            <h3>2.3 Photo &amp; Video Gallery Storage (`READ_MEDIA_VIDEO` / Gallery Access)</h3>
+            <p>
+                The App requests access to read and write media files to enable two user-initiated features:
+            </p>
+            <ul>
+                <li><strong>Importing Videos:</strong> Allows you to pick existing videos from your gallery to apply the retro filter.</li>
+                <li><strong>Exporting / Saving Videos:</strong> Allows you to save your rendered clips directly to your device's photo/video gallery.</li>
+            </ul>
+            <p>
+                The App only accesses video files that you explicitly choose to import or save. It does not scan, index, or access unrelated personal photos, documents, or media.
+            </p>
+
+            <h2>3. No Accounts or Personal Identity Collection</h2>
+            <p>
+                Car Meet Cam does not require user registration, logins, passwords, or personal profile creation. You can use all core camera and export features completely anonymously.
+            </p>
+
+            <h2>4. Third-Party Services and Advertising</h2>
+            <p>
+                To maintain the App and offer it for free, we use trusted third-party developer services that may collect device identifiers and usage statistics:
+            </p>
+            <ul>
+                <li>
+                    <strong>Google Play Services:</strong> Powers essential Android framework APIs, security, and app updates.
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+                </li>
+                <li>
+                    <strong>Google AdMob:</strong> Serves non-intrusive advertisements. AdMob may automatically collect and use device information such as your Android Advertising ID, IP address, and technical device metadata to deliver non-personalized or personalized ads.
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy &amp; Terms</a> and 
+                    <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">How AdMob Uses Data</a>
+                </li>
+            </ul>
+
+            <h2>5. Controlling Your Advertising Preferences</h2>
+            <p>
+                You have full control over interest-based advertising on your Android device:
+            </p>
+            <ul>
+                <li>Open your device's <strong>Settings</strong> app.</li>
+                <li>Navigate to <strong>Google</strong> &gt; <strong>Ads</strong> (or <strong>Privacy</strong> &gt; <strong>Ads</strong>).</li>
+                <li>Tap <strong>"Delete advertising ID"</strong> or <strong>"Reset advertising ID"</strong>.</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <div class="box">
+                <p>
+                    Car Meet Cam is not intended for use by children under the age of 13. We do not knowingly solicit or collect personally identifiable information from children under 13. If you believe that a child has provided us with personal information, please contact us immediately so that we can remove it.
+                </p>
+            </div>
+
+            <h2>7. GDPR and User Rights</h2>
+            <p>
+                Under the General Data Protection Regulation (GDPR) and international privacy laws, you have full ownership and rights over your content:
+            </p>
+            <ul>
+                <li><strong>Data Ownership &amp; Portability:</strong> All video files remain stored on your physical device. You can copy, move, or share them at your discretion.</li>
+                <li><strong>Erasure (Right to Be Forgotten):</strong> You can erase any saved videos directly within your device's gallery app, or erase all temporary cache by clearing the App's data or uninstalling it.</li>
+            </ul>
+
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>
+                We may update our Privacy Policy periodically. Any modifications will be reflected on this page alongside an updated "Last updated" date. We encourage users to review this page periodically.
+            </p>
+
+            <h2>9. Contact Us</h2>
+            <p>
+                If you have questions or inquiries regarding this Privacy Policy, please reach out to:
+            </p>
+            <p>
+                Email: <a href="mailto:boikoff.developments@gmail.com">boikoff.developments@gmail.com</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Boikoff Developments. All rights reserved.</p>
+        <p>Contact Email: <a href="mailto:boikoff.developments@gmail.com">boikoff.developments@gmail.com</a></p>
+    </footer>
+</body>
+</html>
